@@ -63,3 +63,20 @@ t.print_self_len()
 t.__setitem__("a","123")
 t['b'] = "321"
 t.print_self_len()
+
+
+# ----------------------------------------
+# 可以修改 fun Name
+def NewType(name, tp):
+    def new_type(x):
+        return x
+
+    new_type.__name__ = name
+    new_type.__supertype__ = tp
+    return new_type
+
+B = NewType("B",NewType)
+print("\n modify function Name")
+print(B(123))
+print(B)
+
