@@ -64,7 +64,7 @@ print("-------- 直接傳function，簡化的傳法 ------")
 # ------------------- import 環境 from __main__ -------------------
 def joinstr_test(A):
     joinstr_3(A)
-
+    
 print("-------- import 環境 from __main__ ------")
 print(timeit.timeit("joinstr_test(A)", setup="from __main__ import joinstr_test,A", number=10000))
 
